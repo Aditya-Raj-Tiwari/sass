@@ -1,39 +1,5 @@
-// VARIABLES ------------------------------------ /
-
-$white: #fff;
-
-$color-primary: #278da4;
-$color-secondary: #b13c69;
-$color-accent: #eeea72;
-$color-shade: #eee;
-
-$color-text: #343434;
-$color-bg: #3acec2;
-$color-bg-light: #009fe1;
-
-$font-stack-primary: 'Raleway', sans-serif;
-$font-stack-secondary: 'Bree Serif', serif;
-
-$max-width: 1000px;
-
-// MIXINS ------------------------------------ /
-
-@mixin skewed {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 50px; 
-  position: absolute;
-  transform: skewY(-2deg);  
-}
-
-@mixin center {
-  width: 90%;
-  max-width: $max-width;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+// IMPORT PARTIALS ------------------------------------ /
+@import "partials/variables", "partials/mixins";
 /* BASE ------------------------------------------- */
 
 * {
@@ -71,7 +37,7 @@ a {
   color: $color-primary;
   text-decoration: none;
   &:hover {
-    color: $color-secondary;  
+    color: $color-secondary;
   }
 }
 
@@ -79,7 +45,8 @@ a {
 
 header {
   height: 460px;
-  background: linear-gradient($color-bg-light, $color-bg), url('../img/bg.jpg') no-repeat;
+  background: linear-gradient($color-bg-light, $color-bg),
+    url("../img/bg.jpg") no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
   position: relative;
@@ -98,7 +65,7 @@ header {
     @include skewed;
     background-color: $white;
     bottom: -25px;
-  } 
+  }
 }
 
 footer {
@@ -106,14 +73,13 @@ footer {
   height: 100px;
   background-color: $color-shade;
   margin-top: 3.5em;
-  position: relative; 
+  position: relative;
   &::before {
     @include skewed;
     background-color: $color-shade;
     top: -25px;
-  } 
+  }
 }
-
 
 /* CONTAINERS ------------------------------------- */
 
@@ -123,7 +89,7 @@ footer {
 
 .intro {
   margin: auto;
-  padding: 1em 1em 3em; 
+  padding: 1em 1em 3em;
 }
 
 /* COMPONENTS ------------------------------------- */
@@ -142,14 +108,14 @@ footer {
     padding: 0.5em;
     transition: 0.3s;
     &:hover {
-      color: $color-accent;  
+      color: $color-accent;
     }
   }
 }
 
 .img-featured {
   width: 165px;
-  border: 4px solid $white; 
+  border: 4px solid $white;
   border-radius: 50%;
   margin-top: 75px;
   position: relative;
@@ -165,7 +131,7 @@ footer {
   h1 {
     margin: 0.35em 0 0;
     line-height: 1.25;
-  }  
+  }
   .icon,
   h1 {
     color: $color-primary;
@@ -180,7 +146,6 @@ footer {
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
-  
 }
 .btn-callout {
   @extend %btn;
@@ -191,10 +156,9 @@ footer {
 .btn-info {
   @extend %btn;
   font-size: 0.85em;
-  background-color: $color-primary;  
+  background-color: $color-primary;
   margin-top: auto;
 }
-
 
 /* MEDIA QUERIES ---------------------------------- */
 
@@ -214,7 +178,7 @@ footer {
   .main-content {
     display: flex;
     flex-wrap: wrap;
-  }  
+  }
   .card {
     flex: 1;
   }
