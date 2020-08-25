@@ -172,7 +172,7 @@ footer {
   }
 }
 
-.btn {
+%btn {
   color: $white;
   display: inline-block;
   font-weight: bold;
@@ -183,13 +183,13 @@ footer {
   
 }
 .btn-callout {
-  @extend .btn;
+  @extend %btn;
   font-size: 1.1em;
   background-color: $color-secondary;
 }
 
 .btn-info {
-  @extend .btn;
+  @extend %btn;
   font-size: 0.85em;
   background-color: $color-primary;  
   margin-top: auto;
