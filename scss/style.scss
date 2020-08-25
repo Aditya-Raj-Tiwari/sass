@@ -180,15 +180,19 @@ footer {
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
-  &-callout {
-    font-size: 1.1em;
-    background-color: $color-secondary;
-  }
-  &-info {
-    font-size: 0.85em;
-    background-color: $color-primary;  
-    margin-top: auto;
-  }
+  
+}
+.btn-callout {
+  @extend .btn;
+  font-size: 1.1em;
+  background-color: $color-secondary;
+}
+
+.btn-info {
+  @extend .btn;
+  font-size: 0.85em;
+  background-color: $color-primary;  
+  margin-top: auto;
 }
 
 
